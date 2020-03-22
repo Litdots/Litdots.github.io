@@ -1,0 +1,482 @@
+
+
+body{ margin: 0px; text-align: left; background: #000; color: #39c;}
+#pagetop{
+	position: fixed;
+	top: 0px;
+	width:100%;
+	height: 100px;
+	background: #069;
+	color: #FFF;
+	font-size: 23px;
+	padding-top: 0px;
+	transition: height 0.3s linear 0s, padding 0.3s linear 0s;
+	overflow:hidden;
+}
+#pagetop > #menu{
+	position: absolute;
+	bottom: 0px;
+	width:100%;
+	background: #000;
+	height: 50px;
+	transition: height 0.3s linear 0s;
+}
+#wrapper{ margin-top: 70px; }
+
+#showsearch{
+				top: 50px; left: 0; overflow-y: scroll; position: fixed; width: 100%; height: 120%;
+				background-color: rgba(0,0,0,0.7); display: none;
+			}
+#adam-eve{
+				top: 0px; left: 0; overflow-y: scroll; position: fixed; width: 100%; height: 120%;
+				background-color: rgba(0,0,0,0.7); display: none;
+			}
+#popupBoxOnePosition{
+				top: 0px; left: 0; overflow-y: scroll; position: fixed; width: 100%; height: 120%;
+				background-color: rgba(0,0,0,0.7); display: none;
+			}
+#popupBoxTwoPosition{
+				top: 75px; left: 0; position: fixed; width: 100%; height: 120%;
+				background-color: rgba(0,0,0,0.7); display: none;
+}#popupBoxThreePosition{
+				top: 75px; left: 0; position: fixed; width: 100%; height: 120%;
+				background-color: rgba(0,0,0,0.7); display: none;
+			}
+.popupBoxWrapper{
+				width: absolute; margin: 50px auto; text-align: left;
+			}
+.popupBoxContent{
+				background-color: #000; padding: 15px;
+			}
+
+/*Switch-button*/
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Open";
+    padding-left: 10px;
+    background-color: #5bd; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "Menu";
+    padding-right: 10px;
+    background-color: #0A0A0A; color: #C4C2C2;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+/*Searchit*/
+#SearchIt{
+	position: fixed;
+	border-bottom: 0.2em solid #000;
+	border-right: 0.2em solid #000;
+	padding: 0.1em 0.1em 0.4em 0.50em;
+}
+
+/*Side Screen*/
+#cpBtn{
+	position: fixed;
+	right: 0px;
+	width: 0px;
+	height: 0px;
+}
+#cp{
+	overflow-y: scroll;
+	position: fixed;
+	right: -200px;
+	top: 85px;
+	width: 200px;
+	height: 0px; 
+	background-color: rgba(0,0,0,0.7);
+	transition: right 0.3s linear 0s;
+}
+
+/* CSS Tabs */
+#navlist {
+        
+		color: white;
+        background-color: rgba(0,0,0,0.7);
+        border-bottom: 0.2em solid #000;
+        border-right: 0.2em solid #000;
+        padding: 0 1px;
+        margin-left: 10px;
+        width: 12em;
+        font: normal 14px Verdana, sans-serif;
+}
+
+#navlist li {
+        
+		list-style: none;
+        margin: 0;
+        font-size: 1em;
+}
+
+#navlist a {
+        
+		display: block;
+        text-decoration: none;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        color: white;
+        background: #39c;
+        border-width: 7px;
+        border-style: solid;
+        border-color: #5bd #035 #068 #6cf;
+        border-left: 1em solid red;
+        padding: 0.25em 0.5em 0.4em 0.75em;
+}
+
+#navlist a#current { border-color: #5bd #035 #068 yellow; }
+
+#navlist a {
+        width: 99%;
+        /* only necessary for Internet Explorer */
+}
+
+#navlist a {
+        voice-family: "\"}\"";
+        voice-family: inherit;
+        width: 9.6em;
+        /* Tantek-hack should only used if Internet-Explorer 6 is in standards-compliant mode */
+}
+#navcontainer>#navlist a {
+        width: auto;
+        /* only necessary if you use the hacks above for the Internet Explorer */
+}
+
+#navlist a:hover, #navlist a#current:hover {
+        background: #28b;
+        border-color: #069 #6cf #5bd #fc0;
+        padding: 0.4em 0.35em 0.25em 0.9em;
+}
+
+#navlist a:active, #navlist a#current:active {
+        background: #DDD;
+        border-color: #069 #6cf #5bd red;
+        padding: 0.4em 0.35em 0.25em 0.9em;
+}
+
+/* Nav-part2*/
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline overline;
+}
+
+.menu-header {
+  border-bottom: 1px solid #2a2d2f;
+  padding: 20px;
+  background-size: 32px;
+}
+
+.menu-header-title {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.menu-section {
+  margin: 25px 0;
+}
+
+.menu-section-title {
+  text-transform: uppercase;
+  color: #85888d;
+  font-weight: 200;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  margin:0;
+}
+
+.menu-section-list {
+  padding:0;
+  margin: 10px 0;
+  list-style:none;
+}
+
+.menu-section-list a {
+  display: block;
+  padding: 10px 20px;
+}
+/* search form */
+.searchform form{
+	position: absolute;
+	top: 90px; left: 35px;
+	background-color: transparent;
+	border: none;
+	margin: 0; padding: 0;
+}
+.searchform input.textbox { 
+	margin: 0 3px; padding: 0 2px;
+	width: 130px;
+	background: #000;
+	color: #FFF; 
+	height: 20px;
+	border: 1px solid #7E050A;	
+	vertical-align: top;
+}
+.searchform input.button { 
+	font: bold 12px Arial, Sans-serif; 
+	background: #000;
+	color: #fff;	
+	width: 70px;
+	height: 22px;
+	border: none;
+	padding: 3px 5px;
+	vertical-align: top;
+}
+.basicBox, .swiggleBox, .checkBox {
+  width: 130px;
+  height: 65px;
+  margin: 15px auto;
+  color: #4274D3;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.15rem;
+  line-height: 65px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+svg rect, svg path, svg polyline {
+  fill: none;
+  stroke: #4274D3;
+  stroke-width: 1;
+}
+
+.basicBox:hover svg rect, .swiggleBox:hover svg path, .checkBox:hover svg polyline {
+  stroke: #4274D3;
+}
+
+/* Check Box */
+.checkBox {
+  /* Add Padding Left To Center Text */
+}
+.checkBox svg {
+  /* Presentation Purposes */
+  margin-left: -10px;
+}
+.checkBox svg rect, .checkBox svg polyline {
+  fill: none;
+  stroke: #4274D3;
+  stroke-width: 3;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+}
+.checkBox:hover svg rect {
+  stroke-width: 4;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+}
+.checkBox:hover svg polyline {
+  stroke-width: 4;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+}
+.checkBox svg .button {
+  stroke-dasharray: 400px, 0;
+}
+.checkBox:hover svg .button {
+  stroke-dasharray: 0, 400px;
+  stroke-dashoffset: 33px;
+}
+/* Check Mark Effect */
+.box, .checkMark {
+  opacity: 0;
+}
+.checkBox:hover .box {
+  -webkit-animation: boxDisplay 0.2s forwards;
+  -moz-animation: boxDisplay 0.2s forwards;
+  -ms-animation: boxDisplay 0.2s forwards;
+  -o-animation: boxDisplay 0.2s forwards;
+  animation: boxDisplay 0.2s forwards;
+  -webkit-animation-delay: 0.65s;
+  -moz-animation-delay: 0.65s;
+  -ms-animation-delay: 0.65s;
+  -o-animation-delay: 0.65s;
+  animation-delay: 0.65s;
+}
+.checkBox:hover .checkMark {
+  -webkit-animation: checkDisplay 0.2s forwards;
+  -moz-animation: checkDisplay 0.2s forwards;
+  -ms-animation: checkDisplay 0.2s forwards;
+  -o-animation: checkDisplay 0.2s forwards;
+  animation: checkDisplay 0.2s forwards;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+/* Check Box Display */
+@-webkit-keyframes boxDisplay {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes boxDisplay {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-ms-keyframes boxDisplay {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes boxDisplay {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes boxDisplay {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* Check Mark Display */
+@-webkit-keyframes checkDisplay {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes checkDisplay {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-ms-keyframes checkDisplay {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes checkDisplay {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes checkDisplay {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.button {
+  background-color: #555555;
+  border: 2px solid #008CBA;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+.hide {
+	display: none;
+}
+
+.radio{
+  margin-bottom : 1.5em;
+}
+
+
+input[type=radio   ]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+
+
+input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 1.5em;
+}
+
+
+input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.0625em solid rgb(192,192,192);
+  border-radius    : 0.25em;
+  background       : rgb(224,224,224);
+  background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  vertical-align   : bottom;
+}
+
+
+input[type=radio   ]:not(old):checked + label > span{
+  background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+
+
+
+input[type=radio]:not(old):checked +  label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid rgb(115,153,77);
+  border-radius    : 0.125em;
+  background       : rgb(153,204,102);
+  background-image :    -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :     -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :      -o-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image : -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :         linear-gradient(rgb(179,217,140),rgb(153,204,102));
+}
